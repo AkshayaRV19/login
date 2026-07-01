@@ -60,7 +60,7 @@ function login() {
 
 }
 
-
+function test(){} 
 
 
 const eye=document.getElementById("togglePassword");
