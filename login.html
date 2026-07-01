@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Glass Login</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#06142E,#0B3C5D,#328CC1);
+}
+
+.form-box{
+
+    width:450px;
+    padding:45px;
+    border-radius:35px;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+
+    border:2px solid rgba(0,255,255,.4);
+
+    box-shadow:0 0 20px rgba(0,255,255,.15);
+}
+
+.profile-icon{
+
+    width:100px;
+    height:100px;
+
+    border-radius:50%;
+    border:3px solid cyan;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:auto;
+
+    color:white;
+    font-size:45px;
+
+    background:rgba(255,255,255,.08);
+}
+
+.custom-input{
+    position:relative;
+    margin-bottom:25px;
+}
+
+.custom-input input{
+    width:100%;
+    height:50px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    padding-left:45px;
+    padding-right:45px;
+    font-size:18px;
+}
+
+.custom-input input:focus{
+
+    outline:none;
+    box-shadow:none;
+}
+
+.input-icon{
+
+    position:absolute;
+
+    left:15px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#666;
+    z-index:10;
+}
+
+.eye-icon{
+
+    position:absolute;
+
+    right:15px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#666;
+
+    z-index:10;
+}
+
+.btn{
+
+    width:180px;
+    height:45px;
+    border-radius:10px;
+}
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    font-size:15px;
+}
+
+.options label{
+    color:white;
+    cursor:pointer;
+}
+
+.options input{
+    margin-right:5px;
+}
+
+.options a{
+    color:white;
+    text-decoration:none;
+}
+
+.options a:hover{
+    text-decoration:underline;
+    color:cyan;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="form-box">
+
+    <div class="text-center mb-5">
+
+        <div class="profile-icon">
+            <i class="bi bi-camera-fill"></i>
+        </div>
+
+    </div>
+
+    <!-- Username -->
+<div class="custom-input">
+    <i class="bi bi-person-fill input-icon"></i>
+
+    <input
+        type="text"
+        id="username"
+        class="form-control"
+        placeholder="Username">
+</div>
+
+    <!-- Password -->
+    <div class="custom-input">
+
+    <i class="bi bi-lock-fill input-icon"></i>
+
+    <input
+        type="password"
+        id="password"
+        class="form-control"
+        placeholder="Enter Password">
+
+    <i class="bi bi-eye-slash-fill eye-icon"
+       id="togglePassword"></i>
+
+</div>
+<div class="options">
+    <label>
+        <input type="checkbox" id="remember">
+        Remember Me
+    </label>
+
+    <a href="#" id="forgot">Forgot Password?</a>
+</div>
+
+   <div class="text-center">
+
+    <button
+        type="button"
+        class="btn btn-primary"
+        onclick="login()">
+
+        Submit
+
+    </button>
+
+</div>
+
+<script src="login.js">
+    
+
+</script>
+
+</body>
+</html>
